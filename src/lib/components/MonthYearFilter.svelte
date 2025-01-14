@@ -44,7 +44,7 @@
 	$: console.log('$months', $months);
 </script>
 
-<div class="flex w-full flex-col items-center gap-3">
+<div class="mt-20 flex w-full flex-col items-center gap-3">
 	<div>
 		<span use:melt={$label}>Date</span>
 		<div use:melt={$field}>
@@ -61,7 +61,7 @@
 		</div>
 	</div>
 
-	<div>You selected: {$value}</div>
+	<div class="text-gray-100">You selected: {$value}</div>
 	{#if $open}
 		<div transition:fade={{ duration: 100 }} use:melt={$content}>
 			<div use:melt={$calendar}>
@@ -77,7 +77,7 @@
 					</button>
 				</header>
 
-				<div class="grid grid-cols-4 gap-1">
+				<div class="!grid grid-cols-4 gap-1">
 					{#each $months as month, index}
 						<div
 							class="!w-full rounded-lg px-2"
